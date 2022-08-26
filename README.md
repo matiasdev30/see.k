@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-See.K is a simple keylogger made in python that makes the s records and when the user has connected to the internet it sends the data to the configured email
+See.K a simple keylogger that sends the registered data to the configured email, when connecting to the internet.
 
 ## Features
 
